@@ -1,0 +1,102 @@
+
+<!--<div class="container">
+  <table class="table table-stripped">
+
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Location</th>
+    <th>Profile</th>
+    <th>Actions</th>
+  </tr>
+
+  <tr>
+    <td>{{UserDetails.data[0].name}}</td>
+    <td>{{UserDetails.data[0].email}}</td>
+    <td>{{UserDetails.data[0].location}}</td>
+    <td>{{UserDetails.data[0].profile}}</td>
+    <td><span class="material-icons" (click)="update()">mode_edit</span> <span style=" margin-left: 20px"class="material-icons" (click)="deleted()" >
+      delete
+      </span></td>
+
+
+
+  </tr>
+  </table>
+</div>
+
+<div class="button">
+<button type="button" class="btn btn-dark" (click)="logout()" style="margin-left:50%; margin-top: 30px;" >Logout</button>
+</div> --->
+
+ <div class="container">
+<aside class="profile-card">
+  <header>
+    <!-- here’s the avatar -->
+    <a target="_blank" href="#">
+      <img src="" class="hoverZoomLink">
+    </a>
+
+    <!-- the username -->
+    <h1>
+      {{UserDetails.data[0].name}}
+          </h1>
+
+    <!-- and role or location -->
+    <h2>
+     Profile : {{UserDetails.data[0].profile}}
+          </h2>
+
+  </header>
+
+  <!-- bit of a bio; who are you? -->
+  <div class="profile-bio">
+
+    <p>
+      Email: {{UserDetails.data[0].email}}
+    </p>
+
+    <p>
+      Location:{{UserDetails.data[0].location}}
+    </p>
+
+    <span class="material-icons" (click)="update()">mode_edit</span> <span style=" margin-left: 20px"class="material-icons" (click)="deleted()" >
+      delete
+      </span>
+
+  </div>
+
+
+
+  <!-- some social links to show off -->
+  <ul class="profile-social-links">
+    <li>
+      <a target="_blank" href="https://www.facebook.com/creativedonut">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://twitter.com/dropyourbass">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://github.com/vipulsaxena">
+        <i class="fa fa-github"></i>
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.behance.net/vipulsaxena">
+
+        <i class="fa fa-behance"></i>
+      </a>
+    </li>
+  </ul>
+
+  <div class="button">
+    <button type="button" class="btn btn-primary" (click)="logout()" style="margin-left:40%; margin-top: 30px;" >Logout</button>
+    </div>
+</aside>
+
+
+ </div>

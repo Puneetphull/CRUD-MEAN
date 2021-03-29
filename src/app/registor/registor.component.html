@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Registor</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body style="background-color: #666666;">
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" enctype="multipart/form-data" #registors="ngForm" (ngSubmit)="onsubmit(registors)" enctype="multipart/form-data" >
+					<span class="login100-form-title p-b-43">
+						Registor to continue
+					</span>
+
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="email" placeholder="email" required #email="ngModel" [(ngModel)]="userservice.newUser.email">
+						<span class="focus-input100"></span>
+						<span class="label-input100"></span>
+					</div>
+
+          <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="name" placeholder="name" #name="ngModel"[(ngModel)]="userservice.newUser.name" >
+						<span class="focus-input100"></span>
+						<span class="label-input100"></span>
+					</div>
+
+          <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="profile" placeholder="profile" #profile="ngModel" [(ngModel)]="userservice.newUser.profile">
+						<span class="focus-input100"></span>
+						<span class="label-input100"></span>
+					</div>
+
+          <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="location" placeholder="location" #location="ngModel" [(ngModel)]=userservice.newUser.location >
+						<span class="focus-input100"></span>
+						<span class="label-input100"></span>
+					</div>
+
+         <!----- <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="file" name="file" placeholder="profilepic" ng2FileSelect [uploader]="uploader" #file='ngModel' [(ngModel)]=userservice.newUser.file>
+          </div>  --->
+
+					<div class="wrap-input100 validate-input" data-validate="password is required">
+						<input class="input100" type="password" name="password" placeholder="password" #password="ngModel" [(ngModel)]=userservice.newUser.password>
+						<span class="focus-input100"></span>
+						<span class="label-input100"></span>
+          </div>
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" type="submit" (click)="uploader.uploadAll()" >
+						Registor
+						</button>
+					</div>
+
+					<div class="text-center p-t-46 p-b-20">
+						<span class="txt2">
+							<a routerLink="/login">Login</a>
+						</span>
+					</div>
+
+					<div class="login100-form-social flex-c-m">
+						<a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
+							<i class="fa fa-facebook-f" aria-hidden="true"></i>
+						</a>
+
+						<a href="#" class="login100-form-social-item flex-c-m bg2 m-r-5">
+							<i class="fa fa-twitter" aria-hidden="true"></i>
+						</a>
+					</div>
+				</form>
+
+				<div class="login100-more" style="background-image: url('assets/images/bg-01.jpg');">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

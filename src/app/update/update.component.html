@@ -1,0 +1,37 @@
+<div class="jumbotron">
+  Update User Details
+</div>
+      <form class="login100-form validate-form" #update="ngForm" (ngSubmit)="onupdate(update)" >
+        <span class="login100-form-title p-b-40" >
+          Update User
+        </span>
+
+
+        <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+          <input class="input100" type="text" name="email" placeholder="email" #email="ngModel" [(ngModel)]="UserDetails.data[0].email">
+          <span class="focus-input100"></span>
+          <span class="label-input100"></span>
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+          <input class="input100" type="text" name="name" placeholder="name" #name="ngModel"[(ngModel)]="UserDetails.data[0].name" >
+          <span class="focus-input100"></span>
+          <span class="label-input100"></span>
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+          <input class="input100" type="text" name="profile" placeholder="profile" #profile="ngModel" [(ngModel)]="UserDetails.data[0].profile">
+          <span class="focus-input100"></span>
+          <span class="label-input100"></span>
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+          <input class="input100" type="text" name="location" placeholder="location" #location="ngModel" [(ngModel)]=UserDetails.data[0].location >
+          <span class="focus-input100"></span>
+          <span class="label-input100"></span>
+        </div>
+        <div class="container-login100-form-btn">
+          <button class="login100-form-btn" type="submit">
+         Update
+          </button>
+        </div>

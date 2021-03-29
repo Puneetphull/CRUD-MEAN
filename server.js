@@ -7,7 +7,7 @@ app.use(body.urlencoded({extended:true}));
 app.use(body.json());
 // exports routers
 const cors = require('cors');
-var apirouter = require("./routes/routers");
+var apirouter = require("./node-database/routes/routers");
 app.use(cors());
 app.use(express.static(__dirname+'dist\website-db\index.html'));
 app.use('/',apirouter);

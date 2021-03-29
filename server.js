@@ -1,4 +1,4 @@
-require("./config/db");
+require("./node-database/config/db");
 
 var express = require("express");
 var body = require('body-parser');

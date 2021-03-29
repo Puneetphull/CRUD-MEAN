@@ -9,7 +9,7 @@ app.use(body.json());
 const cors = require('cors');
 var apirouter = require("./routes/routers");
 app.use(cors());
-
+app.use(express.static(__dirname+'dist\website-db\index.html'));
 app.use('/',apirouter);
 app.use((req,res,next)=>{
   res.setHeader ('Access-Control-Allow-Origin', '*'),

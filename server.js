@@ -1,4 +1,5 @@
 require("./node-database/config/db");
+const path = require('path');
 
 var express = require("express");
 var body = require('body-parser');
@@ -7,10 +8,18 @@ app.use(body.urlencoded({extended:true}));
 app.use(body.json());
 // exports routers
 const cors = require('cors');
-var apirouter = require("./routes/routers");
+var apirouter = require("./node-database/routes/routers");
+const path = require("node:path");
 app.use(cors());
-app.use(express.static(__dirname+'dist\website-db\index.html'));
+
+app.use(express.static(__dirname+'dist\website-db'));
 app.use('/',apirouter);
+
+app.get('/*',function(req,res){
+  res.sendFile(__dirname+'dist\website-db\index.html');
+})
+
+
 app.use((req,res,next)=>{
   res.setHeader ('Access-Control-Allow-Origin', '*'),
   res.setHeader('Access-Control-Allow-Credentials', true),

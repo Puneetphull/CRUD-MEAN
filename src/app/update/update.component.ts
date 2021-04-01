@@ -22,7 +22,7 @@ export class UpdateComponent implements OnInit {
     })
   }
   onupdate(F:NgForm){
-    this.userservice.updateuser(this.id,F.value).subscribe((res=>{
+     this.userservice.updateuser(this.id,F.value).subscribe((res=>{
         this.router.navigate(['/profile'],{"queryParams":{id:this.id}})
 
 })

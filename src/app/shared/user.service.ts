@@ -31,11 +31,11 @@ export class UserService {
 
 
   addnewuser(newuser:User){
-      return this.http.post(environment.apibaseurl +'newUser',newuser);
+      return this.http.post('/newUser',newuser);
 
   }
   login(verify:Login){
-    return this.http.post(environment.apibaseurl +'auth',verify);
+    return this.http.post('/auth',verify);
   }
 
 
@@ -58,14 +58,14 @@ export class UserService {
   }
   getselectedUser(id:string)
   {
-    return this.http.get(environment.apibaseurl+ 'selecteduser/'+id);
+    return this.http.get('/selecteduser/'+id);
   }
 
   deleteduser(id:String){
-    return this.http.delete(environment.apibaseurl+'deleteduser/'+id);
+    return this.http.delete('/deleteduser/'+id);
   }
   updateuser(id:string,data:String){
-    return this.http.put(environment.apibaseurl+'updateuser/'+id,data);
+    return this.http.put('/updateuser/'+id,data);
   }
 
   loginIn(){

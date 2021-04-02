@@ -76,7 +76,7 @@ module.exports.display=(req,res)=>{
 
 module.exports.selectone=(req,res)=>{
     const id = req.params.userid;
-    User.find({_id:id}).then((docs)=>{
+    User.findById({_id:id}).then((docs)=>{
         return res.status(200).json({
             success:true,
             message:"User deatils",

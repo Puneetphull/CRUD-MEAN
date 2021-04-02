@@ -16,6 +16,8 @@ import {FileSelectDirective} from 'ng2-file-upload';
 import {CommonModule} from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+
 
 
 
@@ -41,8 +43,9 @@ import {MatCardModule} from '@angular/material/card';
     BrowserAnimationsModule,
     MatInputModule,
    FileUploadModule,
-   MatCardModule
+   MatCardModule,
    //FileSelectDirective
+   MatButtonModule
 
 
 

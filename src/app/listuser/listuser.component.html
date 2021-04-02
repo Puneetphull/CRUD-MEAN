@@ -8,12 +8,12 @@
 
     <!-- the username -->
     <h1>
-      {{UserDetails.data[0].name}}
+      {{UserDetails.data?.name}}
           </h1>
 
     <!-- and role or location -->
     <h2>
-     Profile : {{UserDetails.data[0].profile}}
+     Profile : {{UserDetails.data?.profile}}
           </h2>
 
   </header>
@@ -22,11 +22,11 @@
   <div class="profile-bio">
 
     <p>
-      Email: {{UserDetails.data[0].email}}
+      Email: {{UserDetails.data?.email}}
     </p>
 
     <p>
-      Location:{{UserDetails.data[0].location}}
+      Location:{{UserDetails.data?.location}}
     </p>
 
     <span class="material-icons" (click)="update()">mode_edit</span> <span style=" margin-left: 20px"class="material-icons" (click)="deleted()" >

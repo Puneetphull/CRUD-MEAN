@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RegistorComponent } from './registor/registor.component';
+import { RegistorComponent } from './register/registor.component';
 import { LoginComponent } from './login/login.component';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";

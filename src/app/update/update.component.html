@@ -1,37 +1,56 @@
-<div class="jumbotron">
-  Update User Details
-</div>
-      <form class="login100-form validate-form" #update="ngForm" (ngSubmit)="onupdate(update)" >
-        <span class="login100-form-title p-b-40" >
-          Update User
-        </span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="container">
+    <mat-card>
+      <div class="jumbotron">Update Profile </div>
+      <form #update="ngForm" (ngSubmit)="update.form.valid && onupdate(update) " novalidate >
+        <mat-form-field>
+          <input matInput type="text" name="email" placeholder="email" #email="ngModel" [(ngModel)]="UserDetails.data.email" required [ngClass]="{'is-inavlid':update.submitted && email.invalid}">
+        </mat-form-field>
+        <mat-error *ngIf="update.submitted && email.invalid">
+       <mat-error *ngIf="email.hasError('required')">
+         Email is required
+       </mat-error>
+        </mat-error>
+        <br/>
+        <mat-form-field>
+          <input matInput type="text" name="name" required placeholder="name" #name="ngModel"[(ngModel)]="UserDetails.data.name"  [ngClass]="{'is-invalid':update.submitted && name.invalid}">
+        </mat-form-field>
+        <mat-error *ngIf="update.submitted && name.invalid">
+          <mat-error *ngIf="name.hasError('required')">
+            Name is must be required
+          </mat-error>
+        </mat-error>
+        <br/>
+        <mat-form-field>
+        <input matInput type="text" name="profile" required placeholder="profile" #profile="ngModel" [(ngModel)]="UserDetails.data.profile" [ngClass]="{'is-invalid':update.submitted && profile.invalid}">
+        </mat-form-field>
+        <mat-error *ngIf="update.submitted && profile.invalid">
+          <mat-error *ngIf="profile.hasError('required')">
+          Profile is must be required
+          </mat-error>
+        </mat-error>
+        <br>
+        <mat-form-field>
+          <input matInput type="text" name="location" required placeholder="location" #location="ngModel" [(ngModel)]=UserDetails.data.location  [ngClass]="{'is-invalid':update.submitted && location.invalid}">
+        </mat-form-field>
+        <mat-error *ngIf="update.submitted && location.invalid">
+          <mat-error *ngIf="location.hasError('required')">
+            Location is must be required
+          </mat-error>
+        </mat-error>
+        <br>
+        <button name="submit" type="submit" mat-raised-button color="primary">Update</button>
+        <br>
+      </form>
+      </mat-card>
+    </div>
 
-
-        <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-          <input class="input100" type="text" name="email" placeholder="email" #email="ngModel" [(ngModel)]="UserDetails.data[0].email">
-          <span class="focus-input100"></span>
-          <span class="label-input100"></span>
-        </div>
-
-        <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-          <input class="input100" type="text" name="name" placeholder="name" #name="ngModel"[(ngModel)]="UserDetails.data[0].name" >
-          <span class="focus-input100"></span>
-          <span class="label-input100"></span>
-        </div>
-
-        <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-          <input class="input100" type="text" name="profile" placeholder="profile" #profile="ngModel" [(ngModel)]="UserDetails.data[0].profile">
-          <span class="focus-input100"></span>
-          <span class="label-input100"></span>
-        </div>
-
-        <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-          <input class="input100" type="text" name="location" placeholder="location" #location="ngModel" [(ngModel)]=UserDetails.data[0].location >
-          <span class="focus-input100"></span>
-          <span class="label-input100"></span>
-        </div>
-        <div class="container-login100-form-btn">
-          <button class="login100-form-btn" type="submit">
-         Update
-          </button>
-        </div>
+</body>
+</html>

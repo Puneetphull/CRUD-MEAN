@@ -23,7 +23,7 @@ export class ListuserComponent implements OnInit {
     this.userid=this.userservice.getUseriId();
     this.userservice.getselectedUser(this.userid).subscribe((data)=>{
       this.UserDetails=data;
-      console.log(data);
+
       })
 
 }

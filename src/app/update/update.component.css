@@ -2,3 +2,23 @@
   font-size: x-large;
   color: crimson;
 }
+mat-form-field{
+  width: 80%;
+}
+body{
+  padding: 40px;;
+  background-color: rgb(207, 174, 223);
+}
+h1{
+  color: cornflowerblue;
+  margin-top: 20px;
+  text-align: center;
+}
+mat-card{
+  width: 60%;
+  margin-left: 250px;
+  margin-top: 100px;
+}
+
+
+

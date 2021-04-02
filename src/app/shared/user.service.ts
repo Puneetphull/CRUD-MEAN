@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Login, User } from './user.model';
-import {environment} from '../../environments/environment.prod';
 import { Router } from '@angular/router';
 
 @Injectable({

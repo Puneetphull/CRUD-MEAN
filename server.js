@@ -10,6 +10,7 @@ app.use(body.json());
 const cors = require('cors');
 var apirouter = require("./node-database/routes/routers");
 app.use(cors());
+<<<<<<< HEAD
 
 app.use(express.static(__dirname+'/dist/website-db/index.html'));
 app.use('/',apirouter);
@@ -19,6 +20,13 @@ app.get('/*',function(req,res){
 })
 
 
+=======
+app.use(express.static(__dirname+'/dist/website-db'));
+app.use('/',apirouter);
+app.get('/*',function(req,res){
+  res.sendFile(__dirname+'/dist/website-db/index.html');
+})
+>>>>>>> 1f7da2f0c8724de01f3ff69032b7f712a3e1568d
 app.use((req,res,next)=>{
   res.setHeader ('Access-Control-Allow-Origin', '*'),
   res.setHeader('Access-Control-Allow-Credentials', true),

@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ListuserComponent } from './listuser/listuser.component';
 import { LoginComponent } from './login/login.component';
-import { RegistorComponent } from './registor/registor.component';
+import { RegistorComponent } from './register/registor.component';
 import {AuthGuard} from './shared/auth.service';
 import { UpdateComponent } from './update/update.component';
 
@@ -17,7 +17,6 @@ const routes: Routes = [{
 },
 { path:"register",
 component:RegistorComponent
-
 },
 {
   path:'profile',

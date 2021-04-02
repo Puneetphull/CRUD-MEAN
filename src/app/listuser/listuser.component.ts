@@ -21,10 +21,9 @@ export class ListuserComponent implements OnInit {
     }
 
     this.userid=this.userservice.getUseriId();
-
-
     this.userservice.getselectedUser(this.userid).subscribe((data)=>{
       this.UserDetails=data;
+      console.log(data);
       })
 
 }
@@ -34,7 +33,6 @@ deleted(){
     alert("user is deleted from database");
     this.userservice.removetoken();
     this.router.navigate(['home']);
-
   })
 }
 
@@ -42,11 +40,6 @@ update(){
   this.router.navigate(['/update'],{"queryParams":{id:this.userid}});
 
 }
-
-
-
-
-
 
 logout(){
   this.userservice.logout();

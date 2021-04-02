@@ -11,11 +11,11 @@ const cors = require('cors');
 var apirouter = require("./node-database/routes/routers");
 app.use(cors());
 
-app.use(express.static(__dirname+'dist\website-db\index.html'));
+app.use(express.static(__dirname+'/dist/website-db/index.html'));
 app.use('/',apirouter);
 
 app.get('/*',function(req,res){
-  res.sendFile(__dirname+'dist\website-db\index.html');
+  res.sendFile(__dirname+'/dist/website-db/index.html');
 })
 
 
